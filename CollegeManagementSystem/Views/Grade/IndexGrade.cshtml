@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "Grades";
+}
+<div class="text-center">
+    <div class="d-grip gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-outline-success" role="button" asp-controller="Grade" asp-action="CreateGrade">Add new grade</a>
+    </div>
+    <br />
+    <h1 class="display-4">Grades List</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Student</th>
+                <th scope="col">Course</th>
+                <th scope="col">Subject</th>
+                <th scope="col">Grade</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Joao Avila</td>
+                <td>Software Engineering</td>
+                <td>Web Development</td>
+                <td>6.7</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Grade" asp-action="EditGrade">Edit</a>
+                        <a role="button" class="btn btn-outline-danger" asp-controller="Grade" asp-action="DeleteGrade">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Wesley Carrara</td>
+                <td>Mechanical Engineering</td>
+                <td>Calculus III</td>
+                <td>9.7</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Grade" asp-action="EditGrade">Edit</a>
+                        <a role="button" class="btn btn-outline-danger" asp-controller="Grade" asp-action="DeleteGrade">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Emanuela Lopez</td>
+                <td>Human Resources Management</td>
+                <td>Human Psyche</td>
+                <td>7.5</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Grade" asp-action="EditGrade">Edit</a>
+                        <a role="button" class="btn btn-outline-danger" asp-controller="Grade" asp-action="DeleteGrade">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+

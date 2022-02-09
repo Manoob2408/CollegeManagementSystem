@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Edit Grade";
+}
+<div class="text-center">
+    <h1 class="display-4">Edit Grade</h1>
+</div>
+<form>
+    <label for="student" class="form-label">Student</label><br />
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Choose a student</option>
+        <option value="1">Joao Avila</option>
+        <option value="2">Wesley Carrara</option>
+        <option value="3">Emanuela Lopez</option>
+    </select><br /><br />
+    <label for="course" class="form-label">Course</label><br />
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Choose a course</option>
+        <option value="1">Software Engineering</option>
+        <option value="2">Mechanical Engineering</option>
+        <option value="3">Human Resources Management</option>
+    </select><br /><br />
+    <label for="subject" class="form-label">Subject</label><br />
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Choose a subject</option>
+        <option value="1">Web Development</option>
+        <option value="2">Calculus III</option>
+        <option value="3">Human Psyche</option>
+    </select>
+    <br /><br />
+    <div class="mb-3">
+        <label for="grade" class="form-label">Grade</label>
+        <input type="text" class="form-control" placeholder="Enter grade">
+    </div>
+    <button type="submit" class="btn btn-outline-primary btn-block">Edit grade</button>
+    <a class="btn btn-outline-secondary btn-block" role="button" asp-controller="Grade" asp-action="IndexGrade">Go back</a>
+</form>
+
+
+
+

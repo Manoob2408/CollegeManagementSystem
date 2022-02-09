@@ -7,7 +7,7 @@
 <form>
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" placeholder="Enter course name">
+        <input type="text" class="form-control" placeholder="Enter teacher's name">
     </div>
     <div class="mb-3">
         <label for="birthday" class="form-label">Birthday</label>
@@ -18,14 +18,14 @@
         <span class="input-group-text">$</span>
         <input type="text" class="form-control">
     </div>
-    <label for="birthday" class="form-label">Course</label><br />
+    <label for="course" class="form-label">Course</label><br />
     <select class="form-select" aria-label="Default select example">
         <option selected>Choose a course</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+        <option value="1">Software Engineering</option>
+        <option value="2">Mechanical Engineering</option>
+        <option value="3">Human Resources Management</option>
     </select>
     <br /><br />
-    <button type="submit" class="btn btn-outline-primary btn-block">Add course</button>
-    <a class="btn btn-outline-secondary btn-block" role="button" asp-controller="Teacher" asp-action="IndexTeacher">Voltar</a>
+    <button type="submit" class="btn btn-outline-primary btn-block">Add teacher</button>
+    <a class="btn btn-outline-secondary btn-block" role="button" asp-controller="Teacher" asp-action="IndexTeacher">Go back</a>
 </form>
