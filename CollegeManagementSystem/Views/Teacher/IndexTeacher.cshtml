@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewData["Title"] = "Teachers";
+}
+<div class="text-center">
+    <div class="d-grip gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-outline-success" role="button" asp-controller="Teacher" asp-action="CreateTeacher">Add new course</a>
+    </div>
+    <br />
+    <h1 class="display-4">Teachers List</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Registration Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Birthday</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Course</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark Smith</td>
+                <td>24/08/1980</td>
+                <td>$2500</td>
+                <td>Software Engineering</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Teacher" asp-action="EditTeacher">Edit</a>
+                        <a role="button" class="btn btn-outline-danger" asp-controller="Teacher" asp-action="DeleteTeacher">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob Thornton</td>
+                <td>19/05/1975</td>
+                <td>$3000</td>
+                <td>Mechanical Engineering</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Teacher" asp-action="EditTeacher">Edit</a>
+                        <a role="button" class="btn btn-outline-danger" asp-controller="Teacher" asp-action="DeleteTeacher">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Elizabeth First</td>
+                <td>21/04/1926</td>
+                <td>$10000</td>
+                <td>Human Resources Management</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Teacher" asp-action="EditTeacher">Edit</a>
+                        <a role="button" class="btn btn-outline-danger" asp-controller="Teacher" asp-action="DeleteTeacher">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

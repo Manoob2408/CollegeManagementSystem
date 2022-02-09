@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Courses";
+}
+<div class="text-center">
+    <div class="d-grip gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-outline-success" role="button" asp-controller="Course" asp-action="Create">Add new course</a>
+    </div>
+    <br />
+    <h1 class="display-4">Courses List</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Subjects</th>
+                <th scope="col">Students</th>
+                <th scope="col">Teacher</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>mdo</td>
+                <td>Teste</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Course" asp-action="Edit">Edit</a>
+                        <a role="button" class="btn btn-outline-danger"asp-controller="Course" asp-action="Delete">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>fat</td>
+                <td>Teste</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary" asp-controller="Course" asp-action="Edit">Edit</a>
+                        <a role="button" class="btn btn-outline-danger" asp-controller="Course" asp-action="Delete">Delete</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>fat</td>
+                <td>Teste</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-outline-primary"asp-controller="Course" asp-action="Edit">Edit</a>
+                        <a role="button" class="btn btn-outline-danger" asp-controller="Course" asp-action="Delete">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

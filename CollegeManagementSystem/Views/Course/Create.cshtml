@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Add Course";
+}
+<div class="text-center">
+    <h1 class="display-4">Add Course</h1>
+</div>
+<form>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" placeholder="Enter course name">
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary btn-block">Add course</button>
+    <a class="btn btn-outline-secondary btn-block" role="button" asp-controller="Course" asp-action="Index">Voltar</a>
+</form>
+
