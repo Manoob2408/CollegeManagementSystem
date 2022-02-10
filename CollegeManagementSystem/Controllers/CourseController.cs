@@ -9,22 +9,22 @@ namespace CollegeManagementSystem.Controllers
     public class CourseController : Controller
     {
         //Return Index view
-        public IActionResult Index()
+        public IActionResult IndexCourse()
         {
             return View();
         }
 
-        public IActionResult Create()
+        public IActionResult CreateCourse()
         {
             return View();
         }
 
-        public IActionResult Edit()
+        public IActionResult EditCourse()
         {
             return View();
         }
 
-        public IActionResult Delete()
+        public IActionResult DeleteCourse()
         {
             return View();
         }
