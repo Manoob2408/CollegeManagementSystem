@@ -1,13 +1,14 @@
-﻿@{
+﻿@model Course 
+@{
     ViewData["Title"] = "Add Course";
 }
 <div class="text-center">
     <h1 class="display-4">Add Course</h1>
 </div>
-<form>
+<form asp-controller="Course" asp-action="CreateCourse" method="post">
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" placeholder="Enter course name">
+        <input type="text" asp-for="name" class="form-control" placeholder="Enter course name">
     </div>
 
     <button type="submit" class="btn btn-outline-primary btn-block">Add course</button>
