@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Student>
 @{
     ViewData["Title"] = "Students";
 }
@@ -12,6 +12,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th scope="col">Id</th>
                 <th scope="col">Registration Number</th>
                 <th scope="col">Name</th>
                 <th scope="col">Birthday</th>
@@ -21,45 +22,27 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark Smith</td>
-                <td>24/08/1980</td>
-                <td>Software Engineering</td>
-                <td>test</td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-outline-primary" asp-controller="Student" asp-action="EditStudent">Edit</a>
-                        <a role="button" class="btn btn-outline-danger" asp-controller="Student" asp-action="DeleteStudent">Delete</a>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob Thornton</td>
-                <td>19/05/1975</td>
-                <td>Mechanical Engineering</td>
-                <td>test</td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-outline-primary" asp-controller="Student" asp-action="EditStudent">Edit</a>
-                        <a role="button" class="btn btn-outline-danger" asp-controller="Student" asp-action="DeleteStudent">Delete</a>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Elizabeth First</td>
-                <td>21/04/1926</td>
-                <td>Human Resources Management</td>
-                <td>test</td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-outline-primary" asp-controller="Student" asp-action="EditStudent">Edit</a>
-                        <a role="button" class="btn btn-outline-danger" asp-controller="Student" asp-action="DeleteStudent">Delete</a>
-                    </div>
-                </td>
-            </tr>
+            @if (Model != null && Model.Any())
+            {
+                foreach (Student student in Model)
+                {
+                    <tr>
+                        <th scope="row">@student.Id</th>
+                        <td>@student.registrationNumber</td>
+                        <td>@student.name</td>
+                        <td>@student.birthday</td>
+                        <td>test</td>
+                        <td>test</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a role="button" class="btn btn-outline-primary" asp-route-id="@student.Id" asp-controller="Student" asp-action="EditStudent">Edit</a>
+                                <a role="button" class="btn btn-outline-danger" asp-route-id="@student.Id" asp-controller="Student" asp-action="DeleteStudent">Delete</a>
+                            </div>
+                        </td>
+                            
+                    </tr>
+                }
+            }
         </tbody>
     </table>
 </div>

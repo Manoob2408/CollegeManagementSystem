@@ -30,6 +30,7 @@ namespace CollegeManagementSystem
             services.AddEntityFrameworkSqlServer()
                 .AddDbContext<DataBaseContext>(o => o.UseSqlServer(Configuration.GetConnectionString("DataBase")));
             services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<IStudentRepository, StudentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
