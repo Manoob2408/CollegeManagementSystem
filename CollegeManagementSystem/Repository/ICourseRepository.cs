@@ -5,7 +5,8 @@ namespace CollegeManagementSystem.Repository
 {
     public interface ICourseRepository
     {
-        List<Course> ListAllCourses();
+        
         Course AddCourse(Course course);
+        List<Course> ListAllCourses();
     }
 }

@@ -1,29 +1,15 @@
-﻿@{
+﻿@model Subject
+@{
     ViewData["Title"] = "Add Subject";
 }
 <div class="text-center">
     <h1 class="display-4">Add Subject</h1>
 </div>
-<form>
+<form asp-controller="Subject" asp-action="CreateSubject" method="post">
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" placeholder="Enter subject name">
+        <input type="text" asp-for="name" class="form-control" placeholder="Enter subject name">
     </div>
-    <label for="course" class="form-label">Course</label><br />
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Choose a course</option>
-        <option value="1">Software Engineering</option>
-        <option value="2">Mechanical Engineering</option>
-        <option value="3">Human Resources Management</option>
-    </select><br /><br />
-    <label for="teacher" class="form-label">Teacher</label><br />
-    <select class="form-select" aria-label="Default select example">
-        <option selected>Choose a teacher</option>
-        <option value="1">Mark Smith</option>
-        <option value="2">Jacob Thornton</option>
-        <option value="3">Elizabeth First</option>
-    </select>
-    <br /><br />
     <button type="submit" class="btn btn-outline-primary btn-block">Add subject</button>
     <a class="btn btn-outline-secondary btn-block" role="button" asp-controller="Subject" asp-action="IndexSubject">Go back</a>
 </form>
