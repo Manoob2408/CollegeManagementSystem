@@ -12,5 +12,6 @@ namespace CollegeManagementSystem.Repository
         List<Teacher> ListAllTeachers();
         Teacher ListById(int id);
         Teacher ModifyTeacher(Teacher teacher);
+        bool DeleteTeacher(int id);
     }
 }

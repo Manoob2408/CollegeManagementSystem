@@ -48,5 +48,18 @@ namespace CollegeManagementSystem.Repository
             return teacher;
 
         }
+
+        public bool DeleteTeacher(int id)
+        {
+            Teacher teacherDB = ListById(id);
+
+            if (teacherDB == null) throw new Exception("There was an error during teacher exclusion!");
+
+            _dataBaseContext.Teacher.Remove(teacherDB);
+            _dataBaseContext.SaveChanges();
+
+            return true;
+
+        }
     }
 }

@@ -52,5 +52,11 @@ namespace CollegeManagementSystem.Controllers
             Teacher teacher = _teacherRepository.ListById(id);
             return View(teacher);
         }
+
+        public IActionResult TeacherExclusion(int id)
+        {
+            _teacherRepository.DeleteTeacher(id);
+            return RedirectToAction("IndexTeacher");
+        }
     }
 }
