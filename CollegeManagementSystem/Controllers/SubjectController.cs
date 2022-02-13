@@ -35,6 +35,13 @@ namespace CollegeManagementSystem.Controllers
             return RedirectToAction("IndexSubject");
         }
 
+        [HttpPost]
+        public IActionResult ModifySubject(Subject subject)
+        {
+            _subjectRepository.ModifySubject(subject);
+            return RedirectToAction("IndexSubject");
+        }
+
         public IActionResult EditSubject(int id)
         {
             Subject subject = _subjectRepository.ListById(id);

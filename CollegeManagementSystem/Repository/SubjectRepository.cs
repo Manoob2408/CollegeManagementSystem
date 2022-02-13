@@ -32,5 +32,19 @@ namespace CollegeManagementSystem.Repository
         {
             return _dataBaseContext.Subjects.FirstOrDefault(x => x.Id == id);
         }
+
+        public Subject ModifySubject(Subject subject)
+        {
+            Subject subjectDB = ListById(subject.Id);
+
+            if (subjectDB == null) throw new Exception("There was an error during subject update!");
+
+            subjectDB.name = subject.name;
+
+            _dataBaseContext.Subjects.Update(subjectDB);
+            _dataBaseContext.SaveChanges();
+
+            return subject;
+        }
     }
 }

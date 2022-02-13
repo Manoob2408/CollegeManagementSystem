@@ -11,5 +11,6 @@ namespace CollegeManagementSystem.Repository
         Subject AddSubject(Subject subject);
         List<Subject> ListAllSubjects();
         Subject ListById(int id);
+        Subject ModifySubject(Subject subject);
     }
 }
