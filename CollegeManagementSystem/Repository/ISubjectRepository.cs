@@ -12,5 +12,6 @@ namespace CollegeManagementSystem.Repository
         List<Subject> ListAllSubjects();
         Subject ListById(int id);
         Subject ModifySubject(Subject subject);
+        bool DeleteSubject(int id);
     }
 }

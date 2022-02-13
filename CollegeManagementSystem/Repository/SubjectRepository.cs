@@ -46,5 +46,18 @@ namespace CollegeManagementSystem.Repository
 
             return subject;
         }
+
+        public bool DeleteSubject(int id)
+        {
+            Subject subjectDB = ListById(id);
+
+            if (subjectDB == null) throw new Exception("There was an error during subject exclusion!");
+
+            _dataBaseContext.Subjects.Remove(subjectDB);
+            _dataBaseContext.SaveChanges();
+
+            return true;
+        }
+
     }
 }
