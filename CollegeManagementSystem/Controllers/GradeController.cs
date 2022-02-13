@@ -47,9 +47,10 @@ namespace CollegeManagementSystem.Controllers
             return View(grade);
         }
 
-        public IActionResult DeleteGrade()
+        public IActionResult DeleteGrade(int id)
         {
-            return View();
+            Grade grade = _gradeRepository.ListById(id);
+            return View(grade);
         }
     }
 }

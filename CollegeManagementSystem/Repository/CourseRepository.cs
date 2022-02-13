@@ -45,5 +45,17 @@ namespace CollegeManagementSystem.Repository
             return course;
 
         }
+
+        public bool DeleteCourse(int id)
+        {
+            Course courseDB = ListById(id);
+
+            if (courseDB == null) throw new Exception("There was an error during course exclusion!");
+
+            _dataBaseContext.Courses.Remove(courseDB);
+            _dataBaseContext.SaveChanges();
+
+            return true;
+        }
     }
 }

@@ -48,9 +48,10 @@ namespace CollegeManagementSystem.Controllers
             return View(subject);
         }
 
-        public IActionResult DeleteSubject()
+        public IActionResult DeleteSubject(int id)
         {
-            return View();
+            Subject subject = _subjectRepository.ListById(id);
+            return View(subject);
         }
     }
 }

@@ -9,5 +9,6 @@ namespace CollegeManagementSystem.Repository
         List<Course> ListAllCourses();
         Course ListById(int id);
         Course ModifyCourse(Course course);
+        bool DeleteCourse(int id);
     }
 }

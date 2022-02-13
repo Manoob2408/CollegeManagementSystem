@@ -54,5 +54,11 @@ namespace CollegeManagementSystem.Controllers
             Course course = _courseRepository.ListById(id);
             return View(course);
         }
+
+        public IActionResult CourseExclusion(int id)
+        {
+            _courseRepository.DeleteCourse(id);
+            return RedirectToAction("IndexCourse");
+        }
     }
 }
