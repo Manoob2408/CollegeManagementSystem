@@ -49,9 +49,10 @@ namespace CollegeManagementSystem.Controllers
             return View(course);
         }
 
-        public IActionResult DeleteCourse()
+        public IActionResult DeleteCourse(int id)
         {
-            return View();
+            Course course = _courseRepository.ListById(id);
+            return View(course);
         }
     }
 }

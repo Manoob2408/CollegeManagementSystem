@@ -34,6 +34,13 @@ namespace CollegeManagementSystem.Controllers
             return RedirectToAction("IndexGrade");
         }
 
+        [HttpPost]
+        public IActionResult ModifyGrade(Grade grade)
+        {
+            _gradeRepository.ModifyGrade(grade);
+            return RedirectToAction("IndexGrade");
+        }
+
         public IActionResult EditGrade(int id)
         {
             Grade grade = _gradeRepository.ListById(id);

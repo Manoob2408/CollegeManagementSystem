@@ -11,5 +11,6 @@ namespace CollegeManagementSystem.Repository
         Grade AddGrade(Grade grade);
         List<Grade> ListAllGrades();
         Grade ListById(int id);
+        Grade ModifyGrade(Grade grade);
     }
 }

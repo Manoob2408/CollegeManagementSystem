@@ -31,5 +31,23 @@ namespace CollegeManagementSystem.Repository
         {
             return _dataBaseContext.Grades.FirstOrDefault(x => x.Id == id);
         }
+
+        public Grade ModifyGrade(Grade grade)
+        {
+            Grade gradeDB = ListById(grade.Id);
+
+            if (grade == null) throw new Exception("There was an error during grade update!");
+
+            gradeDB.student = grade.student;
+            gradeDB.course = grade.course;
+            gradeDB.subject = grade.subject;
+            gradeDB.teacher = grade.teacher;
+            gradeDB.record = grade.record;
+
+            _dataBaseContext.Grades.Update(gradeDB);
+            _dataBaseContext.SaveChanges();
+
+            return grade;
+        }
     }
 }

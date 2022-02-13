@@ -31,5 +31,21 @@ namespace CollegeManagementSystem.Repository
         {
             return _dataBaseContext.Student.FirstOrDefault(x => x.Id == id);
         }
+
+        public Student ModifyStudent(Student student)
+        {
+            Student studentDB = ListById(student.Id);
+
+            if (studentDB == null) throw new Exception("There was an error during student update!");
+
+            studentDB.name = student.name;
+            studentDB.registrationNumber = student.registrationNumber;
+            studentDB.birthday = student.birthday;
+
+            _dataBaseContext.Student.Update(studentDB);
+            _dataBaseContext.SaveChanges();
+
+            return student;
+        }
     }
 }

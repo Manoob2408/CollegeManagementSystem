@@ -5,8 +5,9 @@
 <div class="text-center">
     <h1 class="display-4">Edit Grade</h1>
 </div>
-<form asp-controller="Grade" asp-action="EditGrade" method="post">
+<form asp-controller="Grade" asp-action="ModifyGrade" method="post">
 
+    <input type="hidden" asp-for="Id" />
     <label for="student" class="form-label">Student</label><br />
     <select asp-for="student" class="form-select" aria-label="Default select example">
         <option selected>Choose a student</option>
