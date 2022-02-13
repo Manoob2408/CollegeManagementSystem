@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CollegeManagementSystem.Migrations
 {
-    public partial class CreateTables : Migration
+    public partial class CreatingDataBase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -73,7 +73,7 @@ namespace CollegeManagementSystem.Migrations
                     courseId = table.Column<int>(type: "int", nullable: true),
                     subjectId = table.Column<int>(type: "int", nullable: true),
                     teacherId = table.Column<int>(type: "int", nullable: true),
-                    grade = table.Column<double>(type: "float", nullable: false)
+                    record = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {

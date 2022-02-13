@@ -14,7 +14,7 @@ namespace CollegeManagementSystem.Models
         public Course course { get; set; }
         public Subject subject { get; set; }
         public Teacher teacher { get; set; }
-        public double grade { get; set; }
+        public double record{ get; set; }
 
     }
 }

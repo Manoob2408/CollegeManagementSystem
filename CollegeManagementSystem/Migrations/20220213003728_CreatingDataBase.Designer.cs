@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollegeManagementSystem.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20220210024510_CreateTables")]
-    partial class CreateTables
+    [Migration("20220213003728_CreatingDataBase")]
+    partial class CreatingDataBase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,7 +46,7 @@ namespace CollegeManagementSystem.Migrations
                     b.Property<int?>("courseId")
                         .HasColumnType("int");
 
-                    b.Property<double>("grade")
+                    b.Property<double>("record")
                         .HasColumnType("float");
 
                     b.Property<int?>("studentId")

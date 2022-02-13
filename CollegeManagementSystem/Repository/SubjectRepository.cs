@@ -27,5 +27,10 @@ namespace CollegeManagementSystem.Repository
         {
             return _dataBaseContext.Subjects.ToList();
         }
+
+        public Subject ListById(int id)
+        {
+            return _dataBaseContext.Subjects.FirstOrDefault(x => x.Id == id);
+        }
     }
 }

@@ -7,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace CollegeManagementSystem.Repository
 {
-    public class StudentRepository : IStudentRepository
+    public class GradeRepository : IGradeRepository
     {
         private readonly DataBaseContext _dataBaseContext;
 
-        public StudentRepository(DataBaseContext dataBaseContext)
+        public GradeRepository(DataBaseContext dataBaseContext)
         {
             _dataBaseContext = dataBaseContext;
         }
-        public Student AddStudent(Student student)
+        public Grade AddGrade(Grade grade)
         {
-            _dataBaseContext.Student.Add(student);
+            _dataBaseContext.Grades.Add(grade);
             _dataBaseContext.SaveChanges();
-            return student;
+            return grade;
         }
 
-        public List<Student> ListAllStudents()
+        public List<Grade> ListAllGrades()
         {
-            return _dataBaseContext.Student.ToList();
+            return _dataBaseContext.Grades.ToList();
         }
 
-        public Student ListById(int id)
+        public Grade ListById(int id)
         {
-            return _dataBaseContext.Student.FirstOrDefault(x => x.Id == id);
+            return _dataBaseContext.Grades.FirstOrDefault(x => x.Id == id);
         }
     }
 }

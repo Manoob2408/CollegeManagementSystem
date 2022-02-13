@@ -11,5 +11,7 @@ namespace CollegeManagementSystem.Repository
         Student AddStudent(Student student);
 
         List<Student> ListAllStudents();
+
+        Student ListById(int id);
     }
 }

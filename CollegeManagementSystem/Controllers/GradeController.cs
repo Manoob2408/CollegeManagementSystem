@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CollegeManagementSystem.Models;
+using CollegeManagementSystem.Repository;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,16 @@ namespace CollegeManagementSystem.Controllers
 {
     public class GradeController : Controller
     {
+        private readonly IGradeRepository _gradeRepository;
+
+        public GradeController(IGradeRepository gradeRepository)
+        {
+            _gradeRepository = gradeRepository;
+        }
         public IActionResult IndexGrade()
         {
-            return View();
+            List<Grade> grades = _gradeRepository.ListAllGrades();
+            return View(grades);
         }
 
         public IActionResult CreateGrade()
@@ -18,9 +27,17 @@ namespace CollegeManagementSystem.Controllers
             return View();
         }
 
-        public IActionResult EditGrade()
+        [HttpPost]
+        public IActionResult CreateGrade(Grade grade)
         {
-            return View();
+            _gradeRepository.AddGrade(grade);
+            return RedirectToAction("IndexGrade");
+        }
+
+        public IActionResult EditGrade(int id)
+        {
+            Grade grade = _gradeRepository.ListById(id);
+            return View(grade);
         }
 
         public IActionResult DeleteGrade()

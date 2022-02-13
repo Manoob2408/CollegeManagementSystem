@@ -25,5 +25,25 @@ namespace CollegeManagementSystem.Repository
         {
             return _dataBaseContext.Courses.ToList();
         }
+
+        public Course ListById(int id)
+        {
+            return _dataBaseContext.Courses.FirstOrDefault(x => x.Id == id);
+        }
+
+        public Course ModifyCourse(Course course)
+        {
+            Course courseDB = ListById(course.Id);
+
+            if (courseDB == null) throw new Exception("There was an error during course update!");
+
+            courseDB.name = course.name;
+
+            _dataBaseContext.Courses.Update(courseDB);
+            _dataBaseContext.SaveChanges();
+
+            return course;
+
+        }
     }
 }

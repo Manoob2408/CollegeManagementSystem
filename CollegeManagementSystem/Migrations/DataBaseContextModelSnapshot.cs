@@ -44,7 +44,7 @@ namespace CollegeManagementSystem.Migrations
                     b.Property<int?>("courseId")
                         .HasColumnType("int");
 
-                    b.Property<double>("grade")
+                    b.Property<double>("record")
                         .HasColumnType("float");
 
                     b.Property<int?>("studentId")

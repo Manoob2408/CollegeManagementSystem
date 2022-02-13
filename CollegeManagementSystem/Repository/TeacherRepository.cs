@@ -26,5 +26,10 @@ namespace CollegeManagementSystem.Repository
         {
             return _dataBaseContext.Teacher.ToList();
         }
+
+        public Teacher ListById(int id)
+        {
+            return _dataBaseContext.Teacher.FirstOrDefault(x => x.Id == id);
+        }
     }
 }

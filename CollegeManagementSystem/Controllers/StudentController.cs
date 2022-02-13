@@ -35,9 +35,10 @@ namespace CollegeManagementSystem.Controllers
             return RedirectToAction("IndexStudent");
         }
 
-        public IActionResult EditStudent()
+        public IActionResult EditStudent(int id)
         {
-            return View();
+            Student student = _studentRepository.ListById(id);
+            return View(student);
         }
 
         public IActionResult DeleteStudent()

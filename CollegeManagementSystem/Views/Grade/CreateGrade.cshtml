@@ -1,26 +1,35 @@
-﻿@{
+﻿@model Grade
+@{
     ViewData["Title"] = "Add Grade";
 }
 <div class="text-center">
     <h1 class="display-4">Add Grade</h1>
 </div>
-<form>
+<form asp-controller="Grade" asp-action="CreateGrade" method="post">
+
     <label for="student" class="form-label">Student</label><br />
-    <select class="form-select" aria-label="Default select example">
+    <select asp-for="student" class="form-select" aria-label="Default select example">
         <option selected>Choose a student</option>
         <option value="1">Joao Avila</option>
         <option value="2">Wesley Carrara</option>
         <option value="3">Emanuela Lopez</option>
     </select><br /><br />
     <label for="course" class="form-label">Course</label><br />
-    <select class="form-select" aria-label="Default select example">
+    <select asp-for="course" class="form-select" aria-label="Default select example">
         <option selected>Choose a course</option>
         <option value="1">Software Engineering</option>
         <option value="2">Mechanical Engineering</option>
         <option value="3">Human Resources Management</option>
     </select><br /><br />
+    <label for="teacher" class="form-label">Teacher</label><br />
+    <select asp-for="teacher" class="form-select" aria-label="Default select example">
+        <option selected>Choose a teacher</option>
+        <option value="1">example</option>
+        <option value="2">example</option>
+        <option value="3">example</option>
+    </select><br /><br />
     <label for="subject" class="form-label">Subject</label><br />
-    <select class="form-select" aria-label="Default select example">
+    <select asp-for="subject" class="form-select" aria-label="Default select example">
         <option selected>Choose a subject</option>
         <option value="1">Web Development</option>
         <option value="2">Calculus III</option>
@@ -29,10 +38,11 @@
     <br /><br />
     <div class="mb-3">
         <label for="grade" class="form-label">Grade</label>
-        <input type="text" class="form-control" placeholder="Enter grade">
+        <input type="text" asp-for="record" class="form-control" placeholder="Enter grade">
     </div>
     <button type="submit" class="btn btn-outline-primary btn-block">Add grade</button>
     <a class="btn btn-outline-secondary btn-block" role="button" asp-controller="Grade" asp-action="IndexGrade">Go back</a>
+
 </form>
 
 

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace CollegeManagementSystem.Repository
 {
-    public interface ISubjectRepository
+    public interface IGradeRepository
     {
-        Subject AddSubject(Subject subject);
-        List<Subject> ListAllSubjects();
-        Subject ListById(int id);
+        Grade AddGrade(Grade grade);
+        List<Grade> ListAllGrades();
+        Grade ListById(int id);
     }
 }

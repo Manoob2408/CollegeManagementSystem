@@ -36,9 +36,17 @@ namespace CollegeManagementSystem.Controllers
             return RedirectToAction("IndexCourse");
         }
 
-        public IActionResult EditCourse()
+        [HttpPost]
+        public IActionResult ModifyCourse(Course course)
         {
-            return View();
+            _courseRepository.ModifyCourse(course);
+            return RedirectToAction("IndexCourse");
+        }
+
+        public IActionResult EditCourse(int id)
+        {
+            Course course = _courseRepository.ListById(id);
+            return View(course);
         }
 
         public IActionResult DeleteCourse()

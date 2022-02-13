@@ -33,6 +33,7 @@ namespace CollegeManagementSystem
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<ITeacherRepository, TeacherRepository>();
             services.AddScoped<ISubjectRepository, SubjectRepository>();
+            services.AddScoped<IGradeRepository, GradeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -6,6 +6,7 @@
     <h1 class="display-4">Add Course</h1>
 </div>
 <form asp-controller="Course" asp-action="CreateCourse" method="post">
+
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
         <input type="text" asp-for="name" class="form-control" placeholder="Enter course name">
@@ -13,5 +14,6 @@
 
     <button type="submit" class="btn btn-outline-primary btn-block">Add course</button>
     <a class="btn btn-outline-secondary btn-block" role="button" asp-controller="Course" asp-action="IndexCourse">Go back</a>
+
 </form>
 
