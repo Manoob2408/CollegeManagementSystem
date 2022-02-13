@@ -52,5 +52,11 @@ namespace CollegeManagementSystem.Controllers
             Grade grade = _gradeRepository.ListById(id);
             return View(grade);
         }
+
+        public IActionResult GradeExclusion(int id)
+        {
+            _gradeRepository.DeleteGrade(id);
+            return RedirectToAction("IndexGrade");
+        }
     }
 }

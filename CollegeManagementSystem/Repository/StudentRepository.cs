@@ -47,5 +47,19 @@ namespace CollegeManagementSystem.Repository
 
             return student;
         }
+
+        public bool DeleteStudent(int id)
+        {
+            Student studentDB = ListById(id);
+
+            if (studentDB == null) throw new Exception("There was an error during student exclusion!");
+
+            _dataBaseContext.Student.Remove(studentDB);
+            _dataBaseContext.SaveChanges();
+
+            return true;
+
+        }
+
     }
 }

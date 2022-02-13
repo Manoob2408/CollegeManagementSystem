@@ -36,7 +36,7 @@ namespace CollegeManagementSystem.Repository
         {
             Grade gradeDB = ListById(grade.Id);
 
-            if (grade == null) throw new Exception("There was an error during grade update!");
+            if (gradeDB == null) throw new Exception("There was an error during grade update!");
 
             gradeDB.student = grade.student;
             gradeDB.course = grade.course;
@@ -49,5 +49,18 @@ namespace CollegeManagementSystem.Repository
 
             return grade;
         }
+
+        public bool DeleteGrade(int id)
+        {
+            Grade gradeDB = ListById(id);
+
+            if (gradeDB == null) throw new Exception("There was an error during grade exclusion!");
+
+            _dataBaseContext.Grades.Remove(gradeDB);
+            _dataBaseContext.SaveChanges();
+
+            return true;
+        }
+
     }
 }

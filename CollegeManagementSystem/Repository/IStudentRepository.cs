@@ -15,5 +15,7 @@ namespace CollegeManagementSystem.Repository
         Student ListById(int id);
 
         Student ModifyStudent(Student student);
+
+        bool DeleteStudent(int id);
     }
 }

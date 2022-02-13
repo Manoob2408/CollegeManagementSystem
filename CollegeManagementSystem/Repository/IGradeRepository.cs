@@ -12,5 +12,6 @@ namespace CollegeManagementSystem.Repository
         List<Grade> ListAllGrades();
         Grade ListById(int id);
         Grade ModifyGrade(Grade grade);
+        bool DeleteGrade(int id);
     }
 }
