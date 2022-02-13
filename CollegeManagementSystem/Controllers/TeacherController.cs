@@ -34,6 +34,13 @@ namespace CollegeManagementSystem.Controllers
             return RedirectToAction("IndexTeacher");
         }
 
+        [HttpPost]
+        public IActionResult ModifyTeacher(Teacher teacher)
+        {
+            _teacherRepository.ModifyTeacher(teacher);
+            return RedirectToAction("IndexTeacher");
+        }
+
         public IActionResult EditTeacher(int id)
         {
             Teacher teacher = _teacherRepository.ListById(id);

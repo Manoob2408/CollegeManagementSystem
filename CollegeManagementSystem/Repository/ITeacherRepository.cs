@@ -11,5 +11,6 @@ namespace CollegeManagementSystem.Repository
         Teacher AddTeacher(Teacher teacher);
         List<Teacher> ListAllTeachers();
         Teacher ListById(int id);
+        Teacher ModifyTeacher(Teacher teacher);
     }
 }
