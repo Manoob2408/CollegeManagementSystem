@@ -1,9 +1,11 @@
 ﻿using CollegeManagementSystem.Models;
+using CollegeManagementSystem.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,6 +16,7 @@ namespace CollegeManagementSystem.Controllers
 
         public IActionResult Index()
         {
+
             return View();
         }
 

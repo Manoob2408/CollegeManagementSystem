@@ -19,6 +19,7 @@ namespace CollegeManagementSystem.Controllers
         public IActionResult IndexGrade()
         {
             List<Grade> grades = _gradeRepository.ListAllGrades();
+            
             return View(grades);
         }
 

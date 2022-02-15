@@ -23,6 +23,12 @@ namespace CollegeManagementSystem.Controllers
             return View(students);
         }
 
+        public List<Student> GetStudents()
+        {
+            List<Student> students = _studentRepository.ListAllStudents();
+            return students;
+        }
+
         public IActionResult CreateStudent()
         {
             return View();
